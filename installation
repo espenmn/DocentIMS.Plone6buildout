@@ -1,0 +1,34 @@
+Installing New Instance with Luke’s Buildout
+======================================================
+A)	This is only done once per Webfaction account
+
+1)	Clone docent.buildout from GitHub
+   a.	Go to GitHub  https://github.com/DocentIMS/docent.buildout
+   b.	Select green button “clone or download” and select ‘copy to clipboard’ (will copy both files).
+
+2)	Load github files onto Webfaction account
+   a.	Load the clone the github files once onto the root of the Webfaction account.  From there, you can create a new instannce by copying the files into the webapp folder created in (1) and install.
+   b.	SSH into WF account.  Go to root of WF account, create folder “Github”. 
+   c.	Enter folder and type:  “git clone <paste the selected from GitHub>”  <Enter> 
+
+B)	Deploying Individual Sites
+   1)	On Webfaction
+   2)	Create new app on WF per usual
+   3)	Note the port number.
+   4)	Additional steps
+   5)	because the user/pwd not included in buildout, will need to enter them into buildout_master.cfg.  also, enter the port number.
+   6)	Running buildout and starting the site
+   7)	HOW?
+-------------------
+Notes:
+
+At the root of the WF site, the following files are added.
+
+1)	Plone
+   i.	Backups - each instance will have the Plone backups (ZODB and blobs) put here.  Backups are weekly Sunday morning (5 min after midnight)
+   ii.	buildout-cache  
+   iii.	downloads - 
+   iv.	Checkouts - GitHub products that will be installed by Mr. bob.  During installation of any instance on this WF site, buildout will look here to see if product exists here.  
+   v.	python27 – instance of python shared by any Plone site on this WF. The version installed supports Plone 5.1
+
+b.	If Luke updates the buildout and I want to update site: In the buildout folder, type: “git pull”     TEST

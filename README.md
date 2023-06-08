@@ -6,7 +6,7 @@ cd /home/testsite/webapps/plone51
 ./bin/instance restart
 
 =============
-THIS IS WHAT PRODUCT DOES
+THIS IS WHAT PRODUCT DOES - THIS NEEDS TO BE UPDATED FOR PLONE 6 AND THE PROPER PRODUCTS
 
 * install all products, including my products on Github  (done)
 * install backup:  give location as:  "Backups/<site name>" at root of my webfaction site.  Will it create <folder> if not there?  make sure it Isn't backed up on the local of the plone instance.  (done)
